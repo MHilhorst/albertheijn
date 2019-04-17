@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: albert
+Version: 1.3
+Summary: Interact with hidden REST API of albertheijn.nl
+Home-page: https://github.com/6610749/albertheijn
+Author: Michael Hilhorst
+Author-email: michaeljianghilhorst@gmail.com
+License: UNKNOWN
+Description: # Albert Heijn (unofficial) REST interface
+        
+        New features are being added
+        
+        # Installation
+            pip install albert
+        
+        # Usage
+        
+        ### Initalize API
+            import albert
+            ah = albert.Api("username","password")
+        Make an account on ah.nl.
+        ### Add product to cart    
+            ah.add("wi386562",amount=30)
+        You can find products on www.albertheijn.nl. I.e., https://www.ah.nl/producten2/product/wi383655/ah-conference-peren
+        By default, one item is added to cart if you dont pass the second parameter.
+        
+        ###  Items in cart
+            ah.cart()
+        
+        ### Empty cart
+            ah.empty()
+        
+        ### Save cart to list
+            ah.shopping_list_add("Name of List", empty_card=False)
+        Standard after calling shopping_list_add method, by Default, the items in your cart will remain. When passing the second argument as True, the items will get removed from your cart after saving the cart items to list.
+        
+        ### Product Information
+            ah_product = albert.Product('wi60539/ah-scharrelei-advocaat')
+            print(ah_product.id)
+        
+        pass the query without producten/product/ from a product as string argument to retrieve information from the product. Several items can be accessed:
+        - `id`
+        - `name`
+        - `brand`
+        - `description`
+        - `summary`
+        - `unit_size`
+        - `category`
+        - `is_available`
+        - `priceLabel`
+        - `price_current`
+        - `price_previous`
+        - `is_discounted`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+albert/__init__.py
+albert/albertheijn.py
+albert.egg-info/PKG-INFO
+albert.egg-info/SOURCES.txt
+albert.egg-info/dependency_links.txt
+albert.egg-info/requires.txt
+albert.egg-info/top_level.txt

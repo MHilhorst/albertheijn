@@ -43,4 +43,3 @@ pass the query without producten/product/ from a product as string argument to r
 - `price_current`
 - `price_previous`
 - `is_discounted`
-"# albertheijn" 
